@@ -11,6 +11,24 @@
 
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: pacienteInstance, field: 'exames', 'error')} ">
+	<label for="exames">
+		<g:message code="paciente.exames.label" default="Exames" />
+		
+	</label>
+	
+<ul class="one-to-many">
+<g:each in="${pacienteInstance?.exames?}" var="e">
+    <li><g:link controller="exame" action="show" id="${e.id}">${e?.encodeAsHTML()}</g:link></li>
+</g:each>
+<li class="add">
+<g:link controller="exame" action="create" params="['paciente.id': pacienteInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'exame.label', default: 'Exame')])}</g:link>
+</li>
+</ul>
+
+
+</div>
+
 <div class="fieldcontain ${hasErrors(bean: pacienteInstance, field: 'nome', 'error')} required">
 	<label for="nome">
 		<g:message code="paciente.nome.label" default="Nome" />

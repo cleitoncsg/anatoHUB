@@ -101,6 +101,15 @@
 
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: biopsiaInstance, field: 'paciente', 'error')} required">
+	<label for="paciente">
+		<g:message code="biopsia.paciente.label" default="Paciente" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:select id="paciente" name="paciente.id" from="${anato.Paciente.list()}" optionKey="id" required="" value="${biopsiaInstance?.paciente?.id}" class="many-to-one"/>
+
+</div>
+
 <div class="fieldcontain ${hasErrors(bean: biopsiaInstance, field: 'recebimentoDoMaterial', 'error')} required">
 	<label for="recebimentoDoMaterial">
 		<g:message code="biopsia.recebimentoDoMaterial.label" default="Recebimento Do Material" />

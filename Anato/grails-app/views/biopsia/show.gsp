@@ -122,6 +122,15 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${biopsiaInstance?.paciente}">
+				<li class="fieldcontain">
+					<span id="paciente-label" class="property-label"><g:message code="biopsia.paciente.label" default="Paciente" /></span>
+					
+						<span class="property-value" aria-labelledby="paciente-label"><g:link controller="paciente" action="show" id="${biopsiaInstance?.paciente?.id}">${biopsiaInstance?.paciente?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${biopsiaInstance?.recebimentoDoMaterial}">
 				<li class="fieldcontain">
 					<span id="recebimentoDoMaterial-label" class="property-label"><g:message code="biopsia.recebimentoDoMaterial.label" default="Recebimento Do Material" /></span>

@@ -1,20 +1,20 @@
-<%@ page import="anato.Paciente" %>
+<%@ page import="anato.Autopsia" %>
 <!DOCTYPE html>
 <html>
 
 <head>
 	<meta name="layout" content="kickstart" />
-	<g:set var="entityName" value="${message(code: 'paciente.label', default: 'Paciente')}" />
+	<g:set var="entityName" value="${message(code: 'autopsia.label', default: 'Autopsia')}" />
 	<title><g:message code="default.create.label" args="[entityName]" /></title>
 </head>
 
 <body>
 
-	<section id="create-paciente" class="first">
+	<section id="create-autopsia" class="first">
 
-		<g:hasErrors bean="${pacienteInstance}">
+		<g:hasErrors bean="${autopsiaInstance}">
 		<div class="alert alert-danger">
-			<g:renderErrors bean="${pacienteInstance}" as="list" />
+			<g:renderErrors bean="${autopsiaInstance}" as="list" />
 		</div>
 		</g:hasErrors>
 

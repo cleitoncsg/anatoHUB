@@ -1,26 +1,26 @@
-<%@ page import="anato.Biopsia" %>
+<%@ page import="anato.Autopsia" %>
 <!DOCTYPE html>
 <html>
 
 <head>
 	<meta name="layout" content="kickstart" />
-	<g:set var="entityName" value="${message(code: 'biopsia.label', default: 'Biopsia')}" />
+	<g:set var="entityName" value="${message(code: 'autopsia.label', default: 'Autopsia')}" />
 	<title><g:message code="default.edit.label" args="[entityName]" /></title>
 </head>
 
 <body>
 
-	<section id="edit-biopsia" class="first">
+	<section id="edit-autopsia" class="first">
 
-		<g:hasErrors bean="${biopsiaInstance}">
+		<g:hasErrors bean="${autopsiaInstance}">
 		<div class="alert alert-danger">
-			<g:renderErrors bean="${biopsiaInstance}" as="list" />
+			<g:renderErrors bean="${autopsiaInstance}" as="list" />
 		</div>
 		</g:hasErrors>
 
 		<g:form method="post" class="form-horizontal" role="form" >
-			<g:hiddenField name="id" value="${biopsiaInstance?.id}" />
-			<g:hiddenField name="version" value="${biopsiaInstance?.version}" />
+			<g:hiddenField name="id" value="${autopsiaInstance?.id}" />
+			<g:hiddenField name="version" value="${autopsiaInstance?.version}" />
 			<g:hiddenField name="_method" value="PUT" />
 			
 			<g:render template="form"/>

@@ -6,12 +6,12 @@
 <head>
 	<meta name="layout" content="kickstart" />
 	<g:set var="entityName" value="${message(code: 'paciente.label', default: 'Paciente')}" />
-	<title><g:message code="default.index.label" args="[entityName]" /></title>
+	<title><g:message code="default.list.label" args="[entityName]" /></title>
 </head>
 
 <body>
 
-<section id="index-paciente" class="first">
+<section id="list-paciente" class="first">
 
 	<table class="table table-bordered margin-top-medium">
 		<thead>

@@ -2,120 +2,107 @@
 
 
 
-<div class="fieldcontain ${hasErrors(bean: biopsiaInstance, field: 'coletaDeMaterial', 'error')} required">
-	<label for="coletaDeMaterial">
-		<g:message code="biopsia.coletaDeMaterial.label" default="Coleta De Material" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:datePicker name="coletaDeMaterial" precision="day"  value="${biopsiaInstance?.coletaDeMaterial}"  />
+			<div class="${hasErrors(bean: biopsiaInstance, field: 'coletaDeMaterial', 'error')} required">
+				<label for="coletaDeMaterial" class="control-label"><g:message code="biopsia.coletaDeMaterial.label" default="Coleta De Material" /><span class="required-indicator">*</span></label>
+				<div>
+					<g:datePicker name="coletaDeMaterial" precision="day"  value="${biopsiaInstance?.coletaDeMaterial}"  />
+					<span class="help-inline">${hasErrors(bean: biopsiaInstance, field: 'coletaDeMaterial', 'error')}</span>
+				</div>
+			</div>
 
-</div>
+			<div class="${hasErrors(bean: biopsiaInstance, field: 'conclusao', 'error')} ">
+				<label for="conclusao" class="control-label"><g:message code="biopsia.conclusao.label" default="Conclusao" /></label>
+				<div>
+					<g:textField class="form-control" name="conclusao" value="${biopsiaInstance?.conclusao}"/>
+					<span class="help-inline">${hasErrors(bean: biopsiaInstance, field: 'conclusao', 'error')}</span>
+				</div>
+			</div>
 
-<div class="fieldcontain ${hasErrors(bean: biopsiaInstance, field: 'conclusao', 'error')} required">
-	<label for="conclusao">
-		<g:message code="biopsia.conclusao.label" default="Conclusao" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:textField name="conclusao" required="" value="${biopsiaInstance?.conclusao}"/>
+			<div class="${hasErrors(bean: biopsiaInstance, field: 'dataDeRequisicao', 'error')} required">
+				<label for="dataDeRequisicao" class="control-label"><g:message code="biopsia.dataDeRequisicao.label" default="Data De Requisicao" /><span class="required-indicator">*</span></label>
+				<div>
+					<g:datePicker name="dataDeRequisicao" precision="day"  value="${biopsiaInstance?.dataDeRequisicao}"  />
+					<span class="help-inline">${hasErrors(bean: biopsiaInstance, field: 'dataDeRequisicao', 'error')}</span>
+				</div>
+			</div>
 
-</div>
+			<div class="${hasErrors(bean: biopsiaInstance, field: 'informacoesClinicas', 'error')} ">
+				<label for="informacoesClinicas" class="control-label"><g:message code="biopsia.informacoesClinicas.label" default="Informacoes Clinicas" /></label>
+				<div>
+					<g:textField class="form-control" name="informacoesClinicas" value="${biopsiaInstance?.informacoesClinicas}"/>
+					<span class="help-inline">${hasErrors(bean: biopsiaInstance, field: 'informacoesClinicas', 'error')}</span>
+				</div>
+			</div>
 
-<div class="fieldcontain ${hasErrors(bean: biopsiaInstance, field: 'dataDeRequisicao', 'error')} required">
-	<label for="dataDeRequisicao">
-		<g:message code="biopsia.dataDeRequisicao.label" default="Data De Requisicao" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:datePicker name="dataDeRequisicao" precision="day"  value="${biopsiaInstance?.dataDeRequisicao}"  />
+			<div class="${hasErrors(bean: biopsiaInstance, field: 'legenda', 'error')} ">
+				<label for="legenda" class="control-label"><g:message code="biopsia.legenda.label" default="Legenda" /></label>
+				<div>
+					<g:textField class="form-control" name="legenda" value="${biopsiaInstance?.legenda}"/>
+					<span class="help-inline">${hasErrors(bean: biopsiaInstance, field: 'legenda', 'error')}</span>
+				</div>
+			</div>
 
-</div>
+			<div class="${hasErrors(bean: biopsiaInstance, field: 'macropsia', 'error')} ">
+				<label for="macropsia" class="control-label"><g:message code="biopsia.macropsia.label" default="Macropsia" /></label>
+				<div>
+					<g:textField class="form-control" name="macropsia" value="${biopsiaInstance?.macropsia}"/>
+					<span class="help-inline">${hasErrors(bean: biopsiaInstance, field: 'macropsia', 'error')}</span>
+				</div>
+			</div>
 
-<div class="fieldcontain ${hasErrors(bean: biopsiaInstance, field: 'informacoesClinicas', 'error')} required">
-	<label for="informacoesClinicas">
-		<g:message code="biopsia.informacoesClinicas.label" default="Informacoes Clinicas" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:textField name="informacoesClinicas" required="" value="${biopsiaInstance?.informacoesClinicas}"/>
+			<div class="${hasErrors(bean: biopsiaInstance, field: 'materialRecebido', 'error')} ">
+				<label for="materialRecebido" class="control-label"><g:message code="biopsia.materialRecebido.label" default="Material Recebido" /></label>
+				<div>
+					<g:textField class="form-control" name="materialRecebido" value="${biopsiaInstance?.materialRecebido}"/>
+					<span class="help-inline">${hasErrors(bean: biopsiaInstance, field: 'materialRecebido', 'error')}</span>
+				</div>
+			</div>
 
-</div>
+			<div class="${hasErrors(bean: biopsiaInstance, field: 'medicoRequisitante', 'error')} ">
+				<label for="medicoRequisitante" class="control-label"><g:message code="biopsia.medicoRequisitante.label" default="Medico Requisitante" /></label>
+				<div>
+					<g:textField class="form-control" name="medicoRequisitante" value="${biopsiaInstance?.medicoRequisitante}"/>
+					<span class="help-inline">${hasErrors(bean: biopsiaInstance, field: 'medicoRequisitante', 'error')}</span>
+				</div>
+			</div>
 
-<div class="fieldcontain ${hasErrors(bean: biopsiaInstance, field: 'legenda', 'error')} required">
-	<label for="legenda">
-		<g:message code="biopsia.legenda.label" default="Legenda" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:textField name="legenda" required="" value="${biopsiaInstance?.legenda}"/>
+			<div class="${hasErrors(bean: biopsiaInstance, field: 'medicoResidente', 'error')} ">
+				<label for="medicoResidente" class="control-label"><g:message code="biopsia.medicoResidente.label" default="Medico Residente" /></label>
+				<div>
+					<g:textField class="form-control" name="medicoResidente" value="${biopsiaInstance?.medicoResidente}"/>
+					<span class="help-inline">${hasErrors(bean: biopsiaInstance, field: 'medicoResidente', 'error')}</span>
+				</div>
+			</div>
 
-</div>
+			<div class="${hasErrors(bean: biopsiaInstance, field: 'micropsia', 'error')} ">
+				<label for="micropsia" class="control-label"><g:message code="biopsia.micropsia.label" default="Micropsia" /></label>
+				<div>
+					<g:textField class="form-control" name="micropsia" value="${biopsiaInstance?.micropsia}"/>
+					<span class="help-inline">${hasErrors(bean: biopsiaInstance, field: 'micropsia', 'error')}</span>
+				</div>
+			</div>
 
-<div class="fieldcontain ${hasErrors(bean: biopsiaInstance, field: 'macropsia', 'error')} required">
-	<label for="macropsia">
-		<g:message code="biopsia.macropsia.label" default="Macropsia" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:textField name="macropsia" required="" value="${biopsiaInstance?.macropsia}"/>
+			<div class="${hasErrors(bean: biopsiaInstance, field: 'notas', 'error')} ">
+				<label for="notas" class="control-label"><g:message code="biopsia.notas.label" default="Notas" /></label>
+				<div>
+					<g:textField class="form-control" name="notas" value="${biopsiaInstance?.notas}"/>
+					<span class="help-inline">${hasErrors(bean: biopsiaInstance, field: 'notas', 'error')}</span>
+				</div>
+			</div>
 
-</div>
+			<div class="${hasErrors(bean: biopsiaInstance, field: 'paciente', 'error')} required">
+				<label for="paciente" class="control-label"><g:message code="biopsia.paciente.label" default="Paciente" /><span class="required-indicator">*</span></label>
+				<div>
+					<g:select class="form-control" id="paciente" name="paciente.id" from="${anato.Paciente.list()}" optionKey="id" required="" value="${biopsiaInstance?.paciente?.id}" class="many-to-one"/>
+					<span class="help-inline">${hasErrors(bean: biopsiaInstance, field: 'paciente', 'error')}</span>
+				</div>
+			</div>
 
-<div class="fieldcontain ${hasErrors(bean: biopsiaInstance, field: 'materialRecebido', 'error')} required">
-	<label for="materialRecebido">
-		<g:message code="biopsia.materialRecebido.label" default="Material Recebido" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:textField name="materialRecebido" required="" value="${biopsiaInstance?.materialRecebido}"/>
-
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: biopsiaInstance, field: 'medicoRequisitante', 'error')} required">
-	<label for="medicoRequisitante">
-		<g:message code="biopsia.medicoRequisitante.label" default="Medico Requisitante" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:textField name="medicoRequisitante" required="" value="${biopsiaInstance?.medicoRequisitante}"/>
-
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: biopsiaInstance, field: 'medicoResidente', 'error')} required">
-	<label for="medicoResidente">
-		<g:message code="biopsia.medicoResidente.label" default="Medico Residente" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:textField name="medicoResidente" required="" value="${biopsiaInstance?.medicoResidente}"/>
-
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: biopsiaInstance, field: 'micropsia', 'error')} required">
-	<label for="micropsia">
-		<g:message code="biopsia.micropsia.label" default="Micropsia" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:textField name="micropsia" required="" value="${biopsiaInstance?.micropsia}"/>
-
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: biopsiaInstance, field: 'notas', 'error')} required">
-	<label for="notas">
-		<g:message code="biopsia.notas.label" default="Notas" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:textField name="notas" required="" value="${biopsiaInstance?.notas}"/>
-
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: biopsiaInstance, field: 'paciente', 'error')} required">
-	<label for="paciente">
-		<g:message code="biopsia.paciente.label" default="Paciente" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:select id="paciente" name="paciente.id" from="${anato.Paciente.list()}" optionKey="id" required="" value="${biopsiaInstance?.paciente?.id}" class="many-to-one"/>
-
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: biopsiaInstance, field: 'recebimentoDoMaterial', 'error')} required">
-	<label for="recebimentoDoMaterial">
-		<g:message code="biopsia.recebimentoDoMaterial.label" default="Recebimento Do Material" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:datePicker name="recebimentoDoMaterial" precision="day"  value="${biopsiaInstance?.recebimentoDoMaterial}"  />
-
-</div>
+			<div class="${hasErrors(bean: biopsiaInstance, field: 'recebimentoDoMaterial', 'error')} required">
+				<label for="recebimentoDoMaterial" class="control-label"><g:message code="biopsia.recebimentoDoMaterial.label" default="Recebimento Do Material" /><span class="required-indicator">*</span></label>
+				<div>
+					<g:datePicker name="recebimentoDoMaterial" precision="day"  value="${biopsiaInstance?.recebimentoDoMaterial}"  />
+					<span class="help-inline">${hasErrors(bean: biopsiaInstance, field: 'recebimentoDoMaterial', 'error')}</span>
+				</div>
+			</div>
 

@@ -26,7 +26,7 @@
 			general GSPs pages (e.g., about.gsp), a minimal logging/orientation
 			Filter, and a language switcher.
 		</p>
-		<g:link class="btn btn-large btn-primary" controller="nextSteps">Next Steps</g:link>
+		<g:link class="btn btn-large btn-sucess" controller="nextSteps">Next Steps</g:link>
 	</section>
 
 	<section id="info">

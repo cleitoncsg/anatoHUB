@@ -4,94 +4,12 @@
 <%@ page import="grails.plugin.searchable.internal.util.StringQueryUtils" %>
 <html>
   <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <title><g:if test="${params.q && params.q?.trim() != ''}">${params.q} - </g:if>Grails Searchable Plugin</title>
-    <style type="text/css">
-      * {
-        font-family: Arial, sans-serif;
-        padding: 0;
-        margin: 0;
-      }
-
-      body {
-        font-size: 0.9em;
-        padding: .5em;
-      }
-
-      #header form input {
-        padding: .1em;
-      }
-
-      #header .hint {
-        color: gray;
-      }
-
-      #header h1 a {
-        text-decoration: none;
-        font-family: Georgia, serif;
-          color: dimgray;
-      }
-
-      #header h1 {
-          letter-spacing: -0.1em;
-          float: left;
-      }
-
-      #header h1 span {
-          font-family: Georgia, serif;
-          color: #424242;
-      }
-
-      #header form {
-          margin-left: 22em;
-          padding-top: .1em;
-      }
-
-      .title {
-        margin: 1em 0;
-        padding: .3em .5em;
-        text-align: right;
-        background-color: seashell;
-        border-top: 1px solid lightblue;
-      }
-
-      .result {
-        margin-bottom: 1em;
-      }
-
-      .result .displayLink {
-        color: green;
-      }
-
-      .result .name {
-        font-size: larger;
-      }
-
-      .paging a.step {
-        padding: 0 .3em;
-      }
-
-      .paging span.currentStep {
-          font-weight: bold;
-      }
-
-      ul {
-        margin: 1em 2em;
-      }
-
-      li, p {
-        margin-bottom: 1em;
-      }
-    </style>
-    <script type="text/javascript">
-        var focusQueryInput = function() {
-            document.getElementById("q").focus();
-        }
-    </script>
+    <meta name="layout" content="kickstart" />
+    <title><g:if test="${params.q && params.q?.trim() != ''}">${params.q} - </g:if>Busca de Pacientes</title>
   </head>
   <body onload="focusQueryInput();">
   <div id="header">
-    <h1><a href="http://grails.org/Searchable+Plugin" target="_blank">Busca</a></h1>
+    <h1><a href="http://grails.org/Searchable+Plugin" target="_blank">Grails <span>Searchable</span> Plugin</a></h1>
     <g:form url='[controller: "searchable", action: "index"]' id="searchableForm" name="searchableForm" method="get">
         <g:textField name="q" value="${params.q}" size="50"/> <input type="submit" value="Search" />
     </g:form>

@@ -11,4 +11,8 @@ class Paciente {
 
     static constraints = {
     }
+
+    String toString(){
+  		return prontuario
+	} 
 }

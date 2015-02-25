@@ -20,7 +20,7 @@
 <html>
   <head>
     <meta name="layout" content="kickstart" />
-    <title><g:if test="${params.q && params.q?.trim() != ''}">${params.q} - </g:if>Grails Searchable Plugin</title>
+    <title><g:if test="${params.q && params.q?.trim() != ''}">${params.q} - </g:if>Busca</title>
   </head>
   <body onload="focusQueryInput();">
   <div id="header">

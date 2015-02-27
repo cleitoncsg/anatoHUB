@@ -3,7 +3,7 @@
 	
 			<li class="controller">
 				<g:link controller="paciente" action="index">
-					<g:message code="paciente.label" default="Paciente"/>
+					<h3><g:message code="paciente.label" default="Pacientes Do Sistema"/></h3>
 				</g:link>
 			</li>
 		

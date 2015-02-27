@@ -60,14 +60,9 @@
 		</tbody>
 	</table>
 
-
-	<li class="add">
 		<g:link class="btn btn-large btn-success" controller="biopsia" action="create" params="['paciente.id': pacienteInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'biopsia.label', default: 'Biopsia')])}</g:link>
-	</li>
 
-	<li class="add">
 		<g:link class="btn btn-large btn-success" controller="autopsia" action="create" params="['paciente.id': pacienteInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'autopsia.label', default: 'Autopsia')])}</g:link>
-	</li>
 </section>
 
 </body>

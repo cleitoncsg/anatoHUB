@@ -62,6 +62,7 @@ grails.project.dependency.resolution = {
         compile ':cache:1.1.2'
         compile ":searchable:0.6.9"
         compile ":kickstart-with-bootstrap:1.1.0"
+        compile ":spring-security-core:2.0-RC2"
 
         // plugins needed at runtime but not for compilation
         runtime ":hibernate:3.6.10.13" // or ":hibernate4:4.3.5.1"

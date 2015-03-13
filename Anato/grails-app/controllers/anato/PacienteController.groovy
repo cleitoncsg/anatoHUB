@@ -1,16 +1,24 @@
 package anato
 
 
-
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
 
+/**
+ * PacienteController
+ * A controller class handles incoming web requests and performs actions such as redirects, rendering views and so on.
+ */
 @Transactional(readOnly = true)
 class PacienteController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
-    def index(Integer max) {
+	def index(Integer max) {
+        params.max = Math.min(max ?: 10, 100)
+        respond Paciente.list(params), model:[pacienteInstanceCount: Paciente.count()]
+    }
+
+	def list(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond Paciente.list(params), model:[pacienteInstanceCount: Paciente.count()]
     }
@@ -38,8 +46,8 @@ class PacienteController {
         pacienteInstance.save flush:true
 
         request.withFormat {
-            form multipartForm {
-                flash.message = message(code: 'default.created.message', args: [message(code: 'paciente.label', default: 'Paciente'), pacienteInstance.id])
+            form {
+                flash.message = message(code: 'default.created.message', args: [message(code: 'pacienteInstance.label', default: 'Paciente'), pacienteInstance.id])
                 redirect pacienteInstance
             }
             '*' { respond pacienteInstance, [status: CREATED] }
@@ -65,7 +73,7 @@ class PacienteController {
         pacienteInstance.save flush:true
 
         request.withFormat {
-            form multipartForm {
+            form {
                 flash.message = message(code: 'default.updated.message', args: [message(code: 'Paciente.label', default: 'Paciente'), pacienteInstance.id])
                 redirect pacienteInstance
             }
@@ -84,7 +92,7 @@ class PacienteController {
         pacienteInstance.delete flush:true
 
         request.withFormat {
-            form multipartForm {
+            form {
                 flash.message = message(code: 'default.deleted.message', args: [message(code: 'Paciente.label', default: 'Paciente'), pacienteInstance.id])
                 redirect action:"index", method:"GET"
             }
@@ -94,8 +102,8 @@ class PacienteController {
 
     protected void notFound() {
         request.withFormat {
-            form multipartForm {
-                flash.message = message(code: 'default.not.found.message', args: [message(code: 'paciente.label', default: 'Paciente'), params.id])
+            form {
+                flash.message = message(code: 'default.not.found.message', args: [message(code: 'pacienteInstance.label', default: 'Paciente'), params.id])
                 redirect action: "index", method: "GET"
             }
             '*'{ render status: NOT_FOUND }

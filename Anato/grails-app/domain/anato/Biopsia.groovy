@@ -2,6 +2,8 @@ package anato
 
 class Biopsia extends Exame{
 
+	static belongsTo = [paciente: Paciente]
+	
 	String informacoesClinicas
 	String macropsia
 	String micropsia
@@ -10,5 +12,5 @@ class Biopsia extends Exame{
 	String legenda
 
     static constraints = {
-    }
+    }	
 }

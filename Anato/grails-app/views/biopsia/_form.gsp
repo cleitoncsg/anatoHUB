@@ -2,14 +2,6 @@
 
 
 
-			<div class="${hasErrors(bean: biopsiaInstance, field: 'paciente', 'error')} required">
-				<label for="paciente" class="control-label"><g:message code="biopsia.paciente.label" default="Paciente" /><span class="required-indicator">*</span></label>
-				<div>
-					<g:select class="form-control" id="paciente" name="paciente.id" from="${anato.Paciente.list()}" optionKey="id" required="" value="${biopsiaInstance?.paciente?.id}" class="many-to-one"/>
-					<span class="help-inline">${hasErrors(bean: biopsiaInstance, field: 'paciente', 'error')}</span>
-				</div>
-			</div>
-
 			<div class="${hasErrors(bean: biopsiaInstance, field: 'coletaDeMaterial', 'error')} required">
 				<label for="coletaDeMaterial" class="control-label"><g:message code="biopsia.coletaDeMaterial.label" default="Coleta De Material" /><span class="required-indicator">*</span></label>
 				<div>
@@ -98,7 +90,14 @@
 				</div>
 			</div>
 
-			
+			<div class="${hasErrors(bean: biopsiaInstance, field: 'paciente', 'error')} required">
+				<label for="paciente" class="control-label"><g:message code="biopsia.paciente.label" default="Paciente" /><span class="required-indicator">*</span></label>
+				<div>
+					<g:select class="form-control" id="paciente" name="paciente.id" from="${anato.Paciente.list()}" optionKey="id" required="" value="${biopsiaInstance?.paciente?.id}" class="many-to-one"/>
+					<span class="help-inline">${hasErrors(bean: biopsiaInstance, field: 'paciente', 'error')}</span>
+				</div>
+			</div>
+
 			<div class="${hasErrors(bean: biopsiaInstance, field: 'recebimentoDoMaterial', 'error')} required">
 				<label for="recebimentoDoMaterial" class="control-label"><g:message code="biopsia.recebimentoDoMaterial.label" default="Recebimento Do Material" /><span class="required-indicator">*</span></label>
 				<div>

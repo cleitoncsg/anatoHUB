@@ -5,9 +5,9 @@ package anato
 import grails.test.mixin.*
 import spock.lang.*
 
-@TestFor(BiopsiaController)
-@Mock(Biopsia)
-class BiopsiaControllerSpec extends Specification {
+@TestFor(TesteController)
+@Mock(Teste)
+class TesteControllerSpec extends Specification {
 
     def populateValidParams(params) {
         assert params != null
@@ -21,8 +21,8 @@ class BiopsiaControllerSpec extends Specification {
             controller.index()
 
         then:"The model is correct"
-            !model.biopsiaInstanceList
-            model.biopsiaInstanceCount == 0
+            !model.testeInstanceList
+            model.testeInstanceCount == 0
     }
 
     void "Test the create action returns the correct model"() {
@@ -30,31 +30,31 @@ class BiopsiaControllerSpec extends Specification {
             controller.create()
 
         then:"The model is correctly created"
-            model.biopsiaInstance!= null
+            model.testeInstance!= null
     }
 
     void "Test the save action correctly persists an instance"() {
 
         when:"The save action is executed with an invalid instance"
-            def biopsia = new Biopsia()
-            biopsia.validate()
-            controller.save(biopsia)
+            def teste = new Teste()
+            teste.validate()
+            controller.save(teste)
 
         then:"The create view is rendered again with the correct model"
-            model.biopsiaInstance!= null
+            model.testeInstance!= null
             view == 'create'
 
         when:"The save action is executed with a valid instance"
             response.reset()
             populateValidParams(params)
-            biopsia = new Biopsia(params)
+            teste = new Teste(params)
 
-            controller.save(biopsia)
+            controller.save(teste)
 
         then:"A redirect is issued to the show action"
-            response.redirectedUrl == '/biopsia/show/1'
+            response.redirectedUrl == '/teste/show/1'
             controller.flash.message != null
-            Biopsia.count() == 1
+            Teste.count() == 1
     }
 
     void "Test that the show action returns the correct model"() {
@@ -66,11 +66,11 @@ class BiopsiaControllerSpec extends Specification {
 
         when:"A domain instance is passed to the show action"
             populateValidParams(params)
-            def biopsia = new Biopsia(params)
-            controller.show(biopsia)
+            def teste = new Teste(params)
+            controller.show(teste)
 
         then:"A model is populated containing the domain instance"
-            model.biopsiaInstance == biopsia
+            model.testeInstance == teste
     }
 
     void "Test that the edit action returns the correct model"() {
@@ -82,11 +82,11 @@ class BiopsiaControllerSpec extends Specification {
 
         when:"A domain instance is passed to the edit action"
             populateValidParams(params)
-            def biopsia = new Biopsia(params)
-            controller.edit(biopsia)
+            def teste = new Teste(params)
+            controller.edit(teste)
 
         then:"A model is populated containing the domain instance"
-            model.biopsiaInstance == biopsia
+            model.testeInstance == teste
     }
 
     void "Test the update action performs an update on a valid domain instance"() {
@@ -94,28 +94,28 @@ class BiopsiaControllerSpec extends Specification {
             controller.update(null)
 
         then:"A 404 error is returned"
-            response.redirectedUrl == '/biopsia/index'
+            response.redirectedUrl == '/teste/index'
             flash.message != null
 
 
         when:"An invalid domain instance is passed to the update action"
             response.reset()
-            def biopsia = new Biopsia()
-            biopsia.validate()
-            controller.update(biopsia)
+            def teste = new Teste()
+            teste.validate()
+            controller.update(teste)
 
         then:"The edit view is rendered again with the invalid instance"
             view == 'edit'
-            model.biopsiaInstance == biopsia
+            model.testeInstance == teste
 
         when:"A valid domain instance is passed to the update action"
             response.reset()
             populateValidParams(params)
-            biopsia = new Biopsia(params).save(flush: true)
-            controller.update(biopsia)
+            teste = new Teste(params).save(flush: true)
+            controller.update(teste)
 
         then:"A redirect is issues to the show action"
-            response.redirectedUrl == "/biopsia/show/$biopsia.id"
+            response.redirectedUrl == "/teste/show/$teste.id"
             flash.message != null
     }
 
@@ -124,23 +124,23 @@ class BiopsiaControllerSpec extends Specification {
             controller.delete(null)
 
         then:"A 404 is returned"
-            response.redirectedUrl == '/biopsia/index'
+            response.redirectedUrl == '/teste/index'
             flash.message != null
 
         when:"A domain instance is created"
             response.reset()
             populateValidParams(params)
-            def biopsia = new Biopsia(params).save(flush: true)
+            def teste = new Teste(params).save(flush: true)
 
         then:"It exists"
-            Biopsia.count() == 1
+            Teste.count() == 1
 
         when:"The domain instance is passed to the delete action"
-            controller.delete(biopsia)
+            controller.delete(teste)
 
         then:"The instance is deleted"
-            Biopsia.count() == 0
-            response.redirectedUrl == '/biopsia/index'
+            Teste.count() == 0
+            response.redirectedUrl == '/teste/index'
             flash.message != null
     }
 }

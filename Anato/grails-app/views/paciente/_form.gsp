@@ -2,29 +2,45 @@
 
 
 
-			<div class="${hasErrors(bean: pacienteInstance, field: 'dataDeNascimento', 'error')} required">
-				<label for="dataDeNascimento" class="control-label">
-					<g:message code="paciente.dataDeNascimento.label" default="Data De Nascimento" /><span class="required-indicator">*</span></label>
-				<div>
-					<g:datePicker name="dataDeNascimento" precision="day"  value="${pacienteInstance?.dataDeNascimento}"  />
-					<span class="help-inline">${hasErrors(bean: pacienteInstance, field: 'dataDeNascimento', 'error')}</span>
-				</div>
-			</div>
-
-			<div class="${hasErrors(bean: pacienteInstance, field: 'exames', 'error')} ">
-				<label for="exames" class="control-label"><g:message code="paciente.exames.label" default="Exames" /></label>
+			<div class="${hasErrors(bean: pacienteInstance, field: 'biopsias', 'error')} ">
+				<label for="biopsias" class="control-label"><g:message code="paciente.biopsias.label" default="Biopsias" /></label>
 				<div>
 					
 <ul class="one-to-many">
-<g:each in="${pacienteInstance?.exames?}" var="e">
-    <li><g:link controller="exame" action="show" id="${e.id}">${e?.encodeAsHTML()}</g:link></li>
+<g:each in="${pacienteInstance?.biopsias?}" var="b">
+    <li><g:link controller="biopsia" action="show" id="${b.id}">${b?.encodeAsHTML()}</g:link></li>
 </g:each>
 <li class="add">
-<g:link controller="exame" action="create" params="['paciente.id': pacienteInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'exame.label', default: 'Exame')])}</g:link>
+<g:link controller="biopsia" action="create" params="['paciente.id': pacienteInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'biopsia.label', default: 'Biopsia')])}</g:link>
 </li>
 </ul>
 
-					<span class="help-inline">${hasErrors(bean: pacienteInstance, field: 'exames', 'error')}</span>
+					<span class="help-inline">${hasErrors(bean: pacienteInstance, field: 'biopsias', 'error')}</span>
+				</div>
+			</div>
+
+			<div class="${hasErrors(bean: pacienteInstance, field: 'autopsias', 'error')} ">
+				<label for="autopsias" class="control-label"><g:message code="paciente.autopsias.label" default="Autopsias" /></label>
+				<div>
+					
+<ul class="one-to-many">
+<g:each in="${pacienteInstance?.autopsias?}" var="a">
+    <li><g:link controller="autopsia" action="show" id="${a.id}">${a?.encodeAsHTML()}</g:link></li>
+</g:each>
+<li class="add">
+<g:link controller="autopsia" action="create" params="['paciente.id': pacienteInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'autopsia.label', default: 'Autopsia')])}</g:link>
+</li>
+</ul>
+
+					<span class="help-inline">${hasErrors(bean: pacienteInstance, field: 'autopsias', 'error')}</span>
+				</div>
+			</div>
+
+			<div class="${hasErrors(bean: pacienteInstance, field: 'dataDeNascimento', 'error')} required">
+				<label for="dataDeNascimento" class="control-label"><g:message code="paciente.dataDeNascimento.label" default="Data De Nascimento" /><span class="required-indicator">*</span></label>
+				<div>
+					<g:datePicker name="dataDeNascimento" precision="day"  value="${pacienteInstance?.dataDeNascimento}"  />
+					<span class="help-inline">${hasErrors(bean: pacienteInstance, field: 'dataDeNascimento', 'error')}</span>
 				</div>
 			</div>
 

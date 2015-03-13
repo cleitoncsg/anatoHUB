@@ -17,22 +17,36 @@
 		<tbody>
 		
 			<tr class="prop">
-				<td valign="top" class="name"><g:message code="paciente.dataDeNascimento.label" default="Data De Nascimento" /></td>
+				<td valign="top" class="name"><g:message code="paciente.biopsias.label" default="Biopsias" /></td>
 				
-				<td valign="top" class="value"><g:formatDate date="${pacienteInstance?.dataDeNascimento}" /></td>
+				<td valign="top" style="text-align: left;" class="value">
+					<ul>
+					<g:each in="${pacienteInstance.biopsias}" var="b">
+						<li><g:link controller="biopsia" action="show" id="${b.id}">${b?.encodeAsHTML()}</g:link></li>
+					</g:each>
+					<g:link class="btn btn-large btn-success" controller="biopsia" action="create" params="['paciente.id': pacienteInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'biopsia.label', default: 'Biopsia')])}</g:link>
+					</ul>
+				</td>
 				
 			</tr>
 		
 			<tr class="prop">
-				<td valign="top" class="name"><g:message code="paciente.exames.label" default="Exames" /></td>
+				<td valign="top" class="name"><g:message code="paciente.autopsias.label" default="Autopsias" /></td>
 				
 				<td valign="top" style="text-align: left;" class="value">
 					<ul>
-					<g:each in="${pacienteInstance.exames}" var="e">
-						<li><g:link controller="exame" action="show" id="${e.id}">${e?.encodeAsHTML()}</g:link></li>
+					<g:each in="${pacienteInstance.autopsias}" var="a">
+						<li><g:link controller="autopsia" action="show" id="${a.id}">${a?.encodeAsHTML()}</g:link></li>
 					</g:each>
+					<g:link class="btn btn-large btn-success" controller="autopsia" action="create" params="['paciente.id': pacienteInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'autopsia.label', default: 'Autopsia')])}</g:link>
 					</ul>
 				</td>
+			</tr>
+		
+			<tr class="prop">
+				<td valign="top" class="name"><g:message code="paciente.dataDeNascimento.label" default="Data De Nascimento" /></td>
+				
+				<td valign="top" class="value"><g:formatDate date="${pacienteInstance?.dataDeNascimento}" /></td>
 				
 			</tr>
 		
@@ -59,10 +73,6 @@
 		
 		</tbody>
 	</table>
-
-		<g:link class="btn btn-large btn-success" controller="biopsia" action="create" params="['paciente.id': pacienteInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'biopsia.label', default: 'Biopsia')])}</g:link>
-
-		<g:link class="btn btn-large btn-success" controller="autopsia" action="create" params="['paciente.id': pacienteInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'autopsia.label', default: 'Autopsia')])}</g:link>
 </section>
 
 </body>

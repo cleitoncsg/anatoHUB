@@ -135,3 +135,13 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	'/**/favicon.ico':                ['permitAll']
 ]
 
+grails.plugin.springsecurity.securityConfigType = 'InterceptUrlMap'
+grails.plugin.springsecurity.interceptUrlMap = [
+    '/':                              ['permitAll'],
+    '/index':                         ['permitAll'],
+    '/index.gsp':                     ['permitAll'],
+    '/paciente/**':                   ['ROLE_ADMIN'],
+    '/biopsia/**':                    ['ROLE_ADMIN'],
+    '/login/**':                      ['permitAll'],
+    '/logout/**':                     ['permitAll']
+]

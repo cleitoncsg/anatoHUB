@@ -24,16 +24,37 @@
 			</tr>
 		
 			<tr class="prop">
-				<td valign="top" class="name"><g:message code="autopsia.conclusao.label" default="Conclusao" /></td>
+				<td valign="top" class="name"><g:message code="autopsia.dataDeRequisicao.label" default="Data De Requisicao" /></td>
 				
-				<td valign="top" class="value">${fieldValue(bean: autopsiaInstance, field: "conclusao")}</td>
+				<td valign="top" class="value"><g:formatDate date="${autopsiaInstance?.dataDeRequisicao}" /></td>
 				
 			</tr>
 		
 			<tr class="prop">
-				<td valign="top" class="name"><g:message code="autopsia.dataDeRequisicao.label" default="Data De Requisicao" /></td>
+				<td valign="top" class="name"><g:message code="autopsia.doencaConsequenciasFinal.label" default="Doenca Consequencias Final" /></td>
 				
-				<td valign="top" class="value"><g:formatDate date="${autopsiaInstance?.dataDeRequisicao}" /></td>
+				<td valign="top" class="value">${fieldValue(bean: autopsiaInstance, field: "doencaConsequenciasFinal")}</td>
+				
+			</tr>
+		
+			<tr class="prop">
+				<td valign="top" class="name"><g:message code="autopsia.doencaPrincipal.label" default="Doenca Principal" /></td>
+				
+				<td valign="top" class="value">${fieldValue(bean: autopsiaInstance, field: "doencaPrincipal")}</td>
+				
+			</tr>
+		
+			<tr class="prop">
+				<td valign="top" class="name"><g:message code="autopsia.doencasConsequencia.label" default="Doencas Consequencia" /></td>
+				
+				<td valign="top" class="value">${fieldValue(bean: autopsiaInstance, field: "doencasConsequencia")}</td>
+				
+			</tr>
+		
+			<tr class="prop">
+				<td valign="top" class="name"><g:message code="autopsia.doencasContribuintes.label" default="Doencas Contribuintes" /></td>
+				
+				<td valign="top" class="value">${fieldValue(bean: autopsiaInstance, field: "doencasContribuintes")}</td>
 				
 			</tr>
 		
@@ -69,6 +90,13 @@
 				<td valign="top" class="name"><g:message code="autopsia.notas.label" default="Notas" /></td>
 				
 				<td valign="top" class="value">${fieldValue(bean: autopsiaInstance, field: "notas")}</td>
+				
+			</tr>
+		
+			<tr class="prop">
+				<td valign="top" class="name"><g:message code="autopsia.outrasDoencas.label" default="Outras Doencas" /></td>
+				
+				<td valign="top" class="value">${fieldValue(bean: autopsiaInstance, field: "outrasDoencas")}</td>
 				
 			</tr>
 		

@@ -19,15 +19,15 @@
 			
 				<g:sortableColumn property="coletaDeMaterial" title="${message(code: 'autopsia.coletaDeMaterial.label', default: 'Coleta De Material')}" />
 			
-				<g:sortableColumn property="conclusao" title="${message(code: 'autopsia.conclusao.label', default: 'Conclusao')}" />
-			
 				<g:sortableColumn property="dataDeRequisicao" title="${message(code: 'autopsia.dataDeRequisicao.label', default: 'Data De Requisicao')}" />
 			
-				<g:sortableColumn property="legenda" title="${message(code: 'autopsia.legenda.label', default: 'Legenda')}" />
+				<g:sortableColumn property="doencaConsequenciasFinal" title="${message(code: 'autopsia.doencaConsequenciasFinal.label', default: 'Doenca Consequencias Final')}" />
 			
-				<g:sortableColumn property="materialRecebido" title="${message(code: 'autopsia.materialRecebido.label', default: 'Material Recebido')}" />
+				<g:sortableColumn property="doencaPrincipal" title="${message(code: 'autopsia.doencaPrincipal.label', default: 'Doenca Principal')}" />
 			
-				<g:sortableColumn property="medicoRequisitante" title="${message(code: 'autopsia.medicoRequisitante.label', default: 'Medico Requisitante')}" />
+				<g:sortableColumn property="doencasConsequencia" title="${message(code: 'autopsia.doencasConsequencia.label', default: 'Doencas Consequencia')}" />
+			
+				<g:sortableColumn property="doencasContribuintes" title="${message(code: 'autopsia.doencasContribuintes.label', default: 'Doencas Contribuintes')}" />
 			
 			</tr>
 		</thead>
@@ -37,15 +37,15 @@
 			
 				<td><g:link action="show" id="${autopsiaInstance.id}">${fieldValue(bean: autopsiaInstance, field: "coletaDeMaterial")}</g:link></td>
 			
-				<td>${fieldValue(bean: autopsiaInstance, field: "conclusao")}</td>
-			
 				<td><g:formatDate date="${autopsiaInstance.dataDeRequisicao}" /></td>
 			
-				<td>${fieldValue(bean: autopsiaInstance, field: "legenda")}</td>
+				<td>${fieldValue(bean: autopsiaInstance, field: "doencaConsequenciasFinal")}</td>
 			
-				<td>${fieldValue(bean: autopsiaInstance, field: "materialRecebido")}</td>
+				<td>${fieldValue(bean: autopsiaInstance, field: "doencaPrincipal")}</td>
 			
-				<td>${fieldValue(bean: autopsiaInstance, field: "medicoRequisitante")}</td>
+				<td>${fieldValue(bean: autopsiaInstance, field: "doencasConsequencia")}</td>
+			
+				<td>${fieldValue(bean: autopsiaInstance, field: "doencasContribuintes")}</td>
 			
 			</tr>
 		</g:each>

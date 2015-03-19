@@ -12,6 +12,9 @@ class Paciente {
     static constraints = {
     	biopsias(blank: true)
     	autopsias(blank: true)
+    	citologias(blank: true)
+    	congelamentos(blank: true)
+    	imuno(blank: true)
     }
 
     String toString(){

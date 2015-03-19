@@ -2,7 +2,7 @@ package anato
 
 class Paciente {
 
-	static hasMany = [biopsias: Biopsia, autopsias: Autopsia]
+	static hasMany = [biopsias: Biopsia, autopsias: Autopsia, citologias: Citologia, congelamentos: Congelacao, imuno: ImunoHistoquimica]
 	static searchable = true
 	String nome
 	String prontuario

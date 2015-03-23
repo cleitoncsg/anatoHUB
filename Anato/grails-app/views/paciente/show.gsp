@@ -42,7 +42,46 @@
 					</ul>
 				</td>
 			</tr>
-		
+
+			<tr class="prop">
+				<td valign="top" class="name"><g:message code="paciente.citologias.label" default="Citologias" /></td>
+				
+				<td valign="top" style="text-align: left;" class="value">
+					<ul>
+					<g:each in="${pacienteInstance.citologias}" var="a">
+						<li><g:link controller="citologia" action="show" id="${a.id}">${a?.encodeAsHTML()}</g:link></li>
+					</g:each>
+					<g:link class="btn btn-large btn-success" controller="autopsia" action="create" params="['paciente.id': pacienteInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'cigologia.label', default: 'Citologias')])}</g:link>
+					</ul>
+				</td>
+			</tr>
+
+			<tr class="prop">
+				<td valign="top" class="name"><g:message code="paciente.congelamentos.label" default="Congelamentos" /></td>
+				
+				<td valign="top" style="text-align: left;" class="value">
+					<ul>
+					<g:each in="${pacienteInstance.congelamentos}" var="a">
+						<li><g:link controller="congelacao" action="show" id="${a.id}">${a?.encodeAsHTML()}</g:link></li>
+					</g:each>
+					<g:link class="btn btn-large btn-success" controller="congelacao" action="create" params="['paciente.id': pacienteInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'congelamento.label', default: 'Congelamentos')])}</g:link>
+					</ul>
+				</td>
+			</tr>
+
+			<tr class="prop">
+				<td valign="top" class="name"><g:message code="paciente.imuno.label" default="Congelamentos" /></td>
+				
+				<td valign="top" style="text-align: left;" class="value">
+					<ul>
+					<g:each in="${pacienteInstance.imuno}" var="a">
+						<li><g:link controller="imunoHistoloquimica" action="show" id="${a.id}">${a?.encodeAsHTML()}</g:link></li>
+					</g:each>
+					<g:link class="btn btn-large btn-success" controller="imunoHistoquimica" action="create" params="['paciente.id': pacienteInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'imunoHistoquimica.label', default: 'imunoHistoquimica')])}</g:link>
+					</ul>
+				</td>
+			</tr>
+
 			<tr class="prop">
 				<td valign="top" class="name"><g:message code="paciente.dataDeNascimento.label" default="Data De Nascimento" /></td>
 				

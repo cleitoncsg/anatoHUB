@@ -23,11 +23,11 @@
 			
 				<g:sortableColumn property="dataDeRequisicao" title="${message(code: 'biopsia.dataDeRequisicao.label', default: 'Data De Requisicao')}" />
 			
+				<g:sortableColumn property="dataEHoras" title="${message(code: 'biopsia.dataEHoras.label', default: 'Data EH oras')}" />
+			
 				<g:sortableColumn property="informacoesClinicas" title="${message(code: 'biopsia.informacoesClinicas.label', default: 'Informacoes Clinicas')}" />
 			
 				<g:sortableColumn property="legenda" title="${message(code: 'biopsia.legenda.label', default: 'Legenda')}" />
-			
-				<g:sortableColumn property="macropsia" title="${message(code: 'biopsia.macropsia.label', default: 'Macropsia')}" />
 			
 			</tr>
 		</thead>
@@ -41,11 +41,11 @@
 			
 				<td><g:formatDate date="${biopsiaInstance.dataDeRequisicao}" /></td>
 			
+				<td><g:formatDate date="${biopsiaInstance.dataEHoras}" /></td>
+			
 				<td>${fieldValue(bean: biopsiaInstance, field: "informacoesClinicas")}</td>
 			
 				<td>${fieldValue(bean: biopsiaInstance, field: "legenda")}</td>
-			
-				<td>${fieldValue(bean: biopsiaInstance, field: "macropsia")}</td>
 			
 			</tr>
 		</g:each>

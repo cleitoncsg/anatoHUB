@@ -1,9 +1,9 @@
 <%@ page import="anato.Autopsia" %>
 
 			<div class="${hasErrors(bean: autopsiaInstance, field: 'dataEHoras', 'error')} required">
-				<label for="dataEHoras" class="control-label"><g:message code="autopsia.dataEHoras.label" default="Data EH oras" /><span class="required-indicator">*</span></label>
+				<label for="dataEHoras" class="control-label"><g:message code="autopsia.dataEHoras.label" default="Data E Hora do Exame" /><span class="required-indicator">*</span></label>
 				<div>
-					<g:datePicker name="dataEHoras" precision="day"  value="${autopsiaInstance?.dataEHoras}"  />
+					<g:datePicker name="dataEHoras" precision="minute"  value="${autopsiaInstance?.dataEHoras}"  />
 					<span class="help-inline">${hasErrors(bean: autopsiaInstance, field: 'dataEHoras', 'error')}</span>
 				</div>
 			</div>

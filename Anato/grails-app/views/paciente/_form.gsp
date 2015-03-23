@@ -1,41 +1,6 @@
 <%@ page import="anato.Paciente" %>
 
 
-
-			<div class="${hasErrors(bean: pacienteInstance, field: 'biopsias', 'error')} ">
-				<label for="biopsias" class="control-label"><g:message code="paciente.biopsias.label" default="Biopsias" /></label>
-				<div>
-					
-<ul class="one-to-many">
-<g:each in="${pacienteInstance?.biopsias?}" var="b">
-    <li><g:link controller="biopsia" action="show" id="${b.id}">${b?.encodeAsHTML()}</g:link></li>
-</g:each>
-<li class="add">
-<g:link controller="biopsia" action="create" params="['paciente.id': pacienteInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'biopsia.label', default: 'Biopsia')])}</g:link>
-</li>
-</ul>
-
-					<span class="help-inline">${hasErrors(bean: pacienteInstance, field: 'biopsias', 'error')}</span>
-				</div>
-			</div>
-
-			<div class="${hasErrors(bean: pacienteInstance, field: 'autopsias', 'error')} ">
-				<label for="autopsias" class="control-label"><g:message code="paciente.autopsias.label" default="Autopsias" /></label>
-				<div>
-					
-<ul class="one-to-many">
-<g:each in="${pacienteInstance?.autopsias?}" var="a">
-    <li><g:link controller="autopsia" action="show" id="${a.id}">${a?.encodeAsHTML()}</g:link></li>
-</g:each>
-<li class="add">
-<g:link controller="autopsia" action="create" params="['paciente.id': pacienteInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'autopsia.label', default: 'Autopsia')])}</g:link>
-</li>
-</ul>
-
-					<span class="help-inline">${hasErrors(bean: pacienteInstance, field: 'autopsias', 'error')}</span>
-				</div>
-			</div>
-
 			<div class="${hasErrors(bean: pacienteInstance, field: 'dataDeNascimento', 'error')} required">
 				<label for="dataDeNascimento" class="control-label"><g:message code="paciente.dataDeNascimento.label" default="Data De Nascimento" /><span class="required-indicator">*</span></label>
 				<div>

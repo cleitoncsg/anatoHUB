@@ -2,6 +2,14 @@
 
 
 
+			<div class="${hasErrors(bean: biopsiaInstance, field: 'dataEHoras', 'error')} required">
+				<label for="dataEHoras" class="control-label"><g:message code="biopsia.dataEHoras.label" default="Data E Hora do Exame" /><span class="required-indicator">*</span></label>
+				<div>
+					<g:datePicker name="dataEHoras" precision="minute"  value="${biopsiaInstance?.dataEHoras}"  />
+					<span class="help-inline">${hasErrors(bean: biopsiaInstance, field: 'dataEHoras', 'error')}</span>
+				</div>
+			</div>
+
 			<div class="${hasErrors(bean: biopsiaInstance, field: 'coletaDeMaterial', 'error')} required">
 				<label for="coletaDeMaterial" class="control-label"><g:message code="biopsia.coletaDeMaterial.label" default="Coleta De Material" /><span class="required-indicator">*</span></label>
 				<div>

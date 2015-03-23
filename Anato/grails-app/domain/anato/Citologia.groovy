@@ -1,6 +1,6 @@
 package anato
 
-class Citologia {
+class Citologia extends Exame{
 
 	static belongsTo = [paciente: Paciente]
 

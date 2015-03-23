@@ -2,6 +2,7 @@ package anato
 
 class Exame {
 
+	Date dataEHoras
 	Date coletaDeMaterial
 	Date dataDeRequisicao
 	Date recebimentoDoMaterial

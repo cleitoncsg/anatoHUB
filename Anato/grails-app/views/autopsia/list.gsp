@@ -21,13 +21,13 @@
 			
 				<g:sortableColumn property="dataDeRequisicao" title="${message(code: 'autopsia.dataDeRequisicao.label', default: 'Data De Requisicao')}" />
 			
+				<g:sortableColumn property="dataEHoras" title="${message(code: 'autopsia.dataEHoras.label', default: 'Data EH oras')}" />
+			
 				<g:sortableColumn property="doencaConsequenciasFinal" title="${message(code: 'autopsia.doencaConsequenciasFinal.label', default: 'Doenca Consequencias Final')}" />
 			
 				<g:sortableColumn property="doencaPrincipal" title="${message(code: 'autopsia.doencaPrincipal.label', default: 'Doenca Principal')}" />
 			
 				<g:sortableColumn property="doencasConsequencia" title="${message(code: 'autopsia.doencasConsequencia.label', default: 'Doencas Consequencia')}" />
-			
-				<g:sortableColumn property="doencasContribuintes" title="${message(code: 'autopsia.doencasContribuintes.label', default: 'Doencas Contribuintes')}" />
 			
 			</tr>
 		</thead>
@@ -39,13 +39,13 @@
 			
 				<td><g:formatDate date="${autopsiaInstance.dataDeRequisicao}" /></td>
 			
+				<td><g:formatDate date="${autopsiaInstance.dataEHoras}" /></td>
+			
 				<td>${fieldValue(bean: autopsiaInstance, field: "doencaConsequenciasFinal")}</td>
 			
 				<td>${fieldValue(bean: autopsiaInstance, field: "doencaPrincipal")}</td>
 			
 				<td>${fieldValue(bean: autopsiaInstance, field: "doencasConsequencia")}</td>
-			
-				<td>${fieldValue(bean: autopsiaInstance, field: "doencasContribuintes")}</td>
 			
 			</tr>
 		</g:each>

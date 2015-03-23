@@ -22,7 +22,18 @@
 		</ul> -->
 
     	<ul class="nav navbar-nav navbar-right">		
-			<g:render template="/_menu/user"/><!-- NOTE: the renderDialog for the "Register" modal dialog MUST be placed outside the NavBar (at least for Bootstrap 2.1.1): see bottom of main.gsp -->			
+			<sec:ifNotLoggedIn>
+				<a class="navbar-brand" href="login/index">
+					<button type="button" class="btn btn-sm btn-success">Login</button></a>
+				<a class="navbar-brand" href="user/create">
+					<button type="button" class="btn btn-sm btn-primary">Register</button>
+				</a>
+			</sec:ifNotLoggedIn>
+			<sec:ifLoggedIn>
+				<a class="navbar-brand" href="logout/index">
+					<button type="button" class="btn btn-sm btn-danger">Logout</button>
+				</a>
+			</sec:ifLoggedIn>		
 	    </ul>			
 
 		</div>

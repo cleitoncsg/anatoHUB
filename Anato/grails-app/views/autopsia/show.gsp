@@ -31,6 +31,13 @@
 			</tr>
 		
 			<tr class="prop">
+				<td valign="top" class="name"><g:message code="autopsia.dataEHoras.label" default="Data EH oras" /></td>
+				
+				<td valign="top" class="value"><g:formatDate date="${autopsiaInstance?.dataEHoras}" /></td>
+				
+			</tr>
+		
+			<tr class="prop">
 				<td valign="top" class="name"><g:message code="autopsia.doencaConsequenciasFinal.label" default="Doenca Consequencias Final" /></td>
 				
 				<td valign="top" class="value">${fieldValue(bean: autopsiaInstance, field: "doencaConsequenciasFinal")}</td>

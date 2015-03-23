@@ -142,6 +142,10 @@ grails.plugin.springsecurity.interceptUrlMap = [
     '/index.gsp':                     ['permitAll'],
     '/paciente/**':                   ['ROLE_ADMIN'],
     '/biopsia/**':                    ['ROLE_ADMIN'],
+    '/autopsia/**':                   ['ROLE_ADMIN'],
+    '/congelacao/**':                 ['ROLE_ADMIN'],
+    '/citologia/**':                  ['ROLE_ADMIN'],
+    '/imunoHistoquimica/**':          ['ROLE_ADMIN'],
     '/login/**':                      ['permitAll'],
     '/logout/**':                     ['permitAll']
 ]

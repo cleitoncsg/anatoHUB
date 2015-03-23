@@ -1,6 +1,6 @@
 package anato
 
-class ImunoHistoquimica {
+class ImunoHistoquimica extends Exame{
 	
 	static belongsTo = [paciente: Paciente]
 

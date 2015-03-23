@@ -1,6 +1,6 @@
 package anato
 
-class Congelacao {
+class Congelacao extends Exame{
 
 	static belongsTo = [paciente: Paciente]
 

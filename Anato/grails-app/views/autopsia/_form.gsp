@@ -1,7 +1,13 @@
 <%@ page import="anato.Autopsia" %>
 
-
-
+			<div class="${hasErrors(bean: autopsiaInstance, field: 'dataEHoras', 'error')} required">
+				<label for="dataEHoras" class="control-label"><g:message code="autopsia.dataEHoras.label" default="Data EH oras" /><span class="required-indicator">*</span></label>
+				<div>
+					<g:datePicker name="dataEHoras" precision="day"  value="${autopsiaInstance?.dataEHoras}"  />
+					<span class="help-inline">${hasErrors(bean: autopsiaInstance, field: 'dataEHoras', 'error')}</span>
+				</div>
+			</div>
+			
 			<div class="${hasErrors(bean: autopsiaInstance, field: 'coletaDeMaterial', 'error')} required">
 				<label for="coletaDeMaterial" class="control-label"><g:message code="autopsia.coletaDeMaterial.label" default="Coleta De Material" /><span class="required-indicator">*</span></label>
 				<div>

@@ -17,17 +17,17 @@
 		<thead>
 			<tr>
 			
+				<g:sortableColumn property="coletaDeMaterial" title="${message(code: 'congelacao.coletaDeMaterial.label', default: 'Coleta De Material')}" />
+			
 				<g:sortableColumn property="conclusao" title="${message(code: 'congelacao.conclusao.label', default: 'Conclusao')}" />
+			
+				<g:sortableColumn property="dataDeRequisicao" title="${message(code: 'congelacao.dataDeRequisicao.label', default: 'Data De Requisicao')}" />
+			
+				<g:sortableColumn property="dataEHoras" title="${message(code: 'congelacao.dataEHoras.label', default: 'Data EH oras')}" />
 			
 				<g:sortableColumn property="informacoesClinicas" title="${message(code: 'congelacao.informacoesClinicas.label', default: 'Informacoes Clinicas')}" />
 			
 				<g:sortableColumn property="legenda" title="${message(code: 'congelacao.legenda.label', default: 'Legenda')}" />
-			
-				<g:sortableColumn property="macropsia" title="${message(code: 'congelacao.macropsia.label', default: 'Macropsia')}" />
-			
-				<g:sortableColumn property="micropsia" title="${message(code: 'congelacao.micropsia.label', default: 'Micropsia')}" />
-			
-				<g:sortableColumn property="notas" title="${message(code: 'congelacao.notas.label', default: 'Notas')}" />
 			
 			</tr>
 		</thead>
@@ -35,17 +35,17 @@
 		<g:each in="${congelacaoInstanceList}" status="i" var="congelacaoInstance">
 			<tr class="${(i % 2) == 0 ? 'odd' : 'even'}">
 			
-				<td><g:link action="show" id="${congelacaoInstance.id}">${fieldValue(bean: congelacaoInstance, field: "conclusao")}</g:link></td>
+				<td><g:link action="show" id="${congelacaoInstance.id}">${fieldValue(bean: congelacaoInstance, field: "coletaDeMaterial")}</g:link></td>
+			
+				<td>${fieldValue(bean: congelacaoInstance, field: "conclusao")}</td>
+			
+				<td><g:formatDate date="${congelacaoInstance.dataDeRequisicao}" /></td>
+			
+				<td><g:formatDate date="${congelacaoInstance.dataEHoras}" /></td>
 			
 				<td>${fieldValue(bean: congelacaoInstance, field: "informacoesClinicas")}</td>
 			
 				<td>${fieldValue(bean: congelacaoInstance, field: "legenda")}</td>
-			
-				<td>${fieldValue(bean: congelacaoInstance, field: "macropsia")}</td>
-			
-				<td>${fieldValue(bean: congelacaoInstance, field: "micropsia")}</td>
-			
-				<td>${fieldValue(bean: congelacaoInstance, field: "notas")}</td>
 			
 			</tr>
 		</g:each>

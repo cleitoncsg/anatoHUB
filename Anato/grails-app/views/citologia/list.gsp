@@ -17,17 +17,17 @@
 		<thead>
 			<tr>
 			
+				<g:sortableColumn property="coletaDeMaterial" title="${message(code: 'citologia.coletaDeMaterial.label', default: 'Coleta De Material')}" />
+			
 				<g:sortableColumn property="conclusao" title="${message(code: 'citologia.conclusao.label', default: 'Conclusao')}" />
+			
+				<g:sortableColumn property="dataDeRequisicao" title="${message(code: 'citologia.dataDeRequisicao.label', default: 'Data De Requisicao')}" />
+			
+				<g:sortableColumn property="dataEHoras" title="${message(code: 'citologia.dataEHoras.label', default: 'Data EH oras')}" />
 			
 				<g:sortableColumn property="informacoesClinicas" title="${message(code: 'citologia.informacoesClinicas.label', default: 'Informacoes Clinicas')}" />
 			
 				<g:sortableColumn property="legenda" title="${message(code: 'citologia.legenda.label', default: 'Legenda')}" />
-			
-				<g:sortableColumn property="micropsia" title="${message(code: 'citologia.micropsia.label', default: 'Micropsia')}" />
-			
-				<g:sortableColumn property="notas" title="${message(code: 'citologia.notas.label', default: 'Notas')}" />
-			
-				<th><g:message code="citologia.paciente.label" default="Paciente" /></th>
 			
 			</tr>
 		</thead>
@@ -35,17 +35,17 @@
 		<g:each in="${citologiaInstanceList}" status="i" var="citologiaInstance">
 			<tr class="${(i % 2) == 0 ? 'odd' : 'even'}">
 			
-				<td><g:link action="show" id="${citologiaInstance.id}">${fieldValue(bean: citologiaInstance, field: "conclusao")}</g:link></td>
+				<td><g:link action="show" id="${citologiaInstance.id}">${fieldValue(bean: citologiaInstance, field: "coletaDeMaterial")}</g:link></td>
+			
+				<td>${fieldValue(bean: citologiaInstance, field: "conclusao")}</td>
+			
+				<td><g:formatDate date="${citologiaInstance.dataDeRequisicao}" /></td>
+			
+				<td><g:formatDate date="${citologiaInstance.dataEHoras}" /></td>
 			
 				<td>${fieldValue(bean: citologiaInstance, field: "informacoesClinicas")}</td>
 			
 				<td>${fieldValue(bean: citologiaInstance, field: "legenda")}</td>
-			
-				<td>${fieldValue(bean: citologiaInstance, field: "micropsia")}</td>
-			
-				<td>${fieldValue(bean: citologiaInstance, field: "notas")}</td>
-			
-				<td>${fieldValue(bean: citologiaInstance, field: "paciente")}</td>
 			
 			</tr>
 		</g:each>

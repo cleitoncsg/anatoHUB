@@ -1,7 +1,5 @@
 <%@ page import="anato.Biopsia" %>
 
-
-
 			<div class="${hasErrors(bean: biopsiaInstance, field: 'dataEHoras', 'error')} required">
 				<label for="dataEHoras" class="control-label"><g:message code="biopsia.dataEHoras.label" default="Data E Hora do Exame" /><span class="required-indicator">*</span></label>
 				<div>
@@ -34,6 +32,7 @@
 				</div>
 			</div>
 
+			
 			<div class="${hasErrors(bean: biopsiaInstance, field: 'informacoesClinicas', 'error')} ">
 				<label for="informacoesClinicas" class="control-label"><g:message code="biopsia.informacoesClinicas.label" default="Informacoes Clinicas" /></label>
 				<div>

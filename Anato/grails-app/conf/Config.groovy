@@ -146,6 +146,7 @@ grails.plugin.springsecurity.interceptUrlMap = [
     '/congelacao/**':                 ['ROLE_ADMIN'],
     '/citologia/**':                  ['ROLE_ADMIN'],
     '/imunoHistoquimica/**':          ['ROLE_ADMIN'],
+    '/searchable/**':                 ['ROLE_ADMIN'],
     '/login/**':                      ['permitAll'],
     '/logout/**':                     ['permitAll']
 ]

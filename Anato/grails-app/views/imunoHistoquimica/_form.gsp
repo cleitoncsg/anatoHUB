@@ -5,7 +5,7 @@
 			<div class="${hasErrors(bean: imunoHistoquimicaInstance, field: 'dataEHoras', 'error')} required">
 				<label for="dataEHoras" class="control-label"><g:message code="imunoHistoquimica.dataEHoras.label" default="Data E Hora do Exame" /><span class="required-indicator">*</span></label>
 				<div>
-					<g:datePicker name="dataEHoras" precision="day"  value="${imunoHistoquimicaInstance?.dataEHoras}"  />
+					<g:datePicker name="dataEHoras" precision="minute"  value="${imunoHistoquimicaInstance?.dataEHoras}"  />
 					<span class="help-inline">${hasErrors(bean: imunoHistoquimicaInstance, field: 'dataEHoras', 'error')}</span>
 				</div>
 			</div>

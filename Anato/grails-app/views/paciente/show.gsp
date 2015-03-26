@@ -17,6 +17,13 @@
 		<tbody>
 		
 			<tr class="prop">
+				<td valign="top" class="name"><g:message code="paciente.nome.label" default="Nome" /></td>
+				
+				<td valign="top" class="value">${fieldValue(bean: pacienteInstance, field: "nome")}</td>
+				
+			</tr>
+		
+			<tr class="prop">
 				<td valign="top" class="name"><g:message code="paciente.biopsias.label" default="Biopsias" /></td>
 				
 				<td valign="top" style="text-align: left;" class="value">
@@ -51,7 +58,7 @@
 					<g:each in="${pacienteInstance.citologias}" var="a">
 						<li><g:link controller="citologia" action="show" id="${a.id}">${a?.encodeAsHTML()}</g:link></li>
 					</g:each>
-					<g:link class="btn btn-large btn-success" controller="autopsia" action="create" params="['paciente.id': pacienteInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'cigologia.label', default: 'Citologias')])}</g:link>
+					<g:link class="btn btn-large btn-success" controller="citologia" action="create" params="['paciente.id': pacienteInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'cigologia.label', default: 'Citologias')])}</g:link>
 					</ul>
 				</td>
 			</tr>
@@ -70,7 +77,7 @@
 			</tr>
 
 			<tr class="prop">
-				<td valign="top" class="name"><g:message code="paciente.imuno.label" default="Congelamentos" /></td>
+				<td valign="top" class="name"><g:message code="paciente.imuno.label" default="Imuno-Histoquímico" /></td>
 				
 				<td valign="top" style="text-align: left;" class="value">
 					<ul>
@@ -86,13 +93,6 @@
 				<td valign="top" class="name"><g:message code="paciente.dataDeNascimento.label" default="Data De Nascimento" /></td>
 				
 				<td valign="top" class="value"><g:formatDate date="${pacienteInstance?.dataDeNascimento}" /></td>
-				
-			</tr>
-		
-			<tr class="prop">
-				<td valign="top" class="name"><g:message code="paciente.nome.label" default="Nome" /></td>
-				
-				<td valign="top" class="value">${fieldValue(bean: pacienteInstance, field: "nome")}</td>
 				
 			</tr>
 		

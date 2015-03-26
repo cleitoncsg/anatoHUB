@@ -23,7 +23,7 @@ environments {
     }
     test {
         dataSource {
-            dbCreate = "update"
+            dbCreate = "create-drop"
             url = "jdbc:mysql://localhost/Anato?useUnicode=yes&characterEncoding=UTF-8"
             username = "root"
             password = "mysqlmysql"

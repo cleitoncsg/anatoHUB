@@ -1,5 +1,7 @@
 <%@ page import="anato.Autopsia" %>
 
+
+
 			<div class="${hasErrors(bean: autopsiaInstance, field: 'dataEHoras', 'error')} required">
 				<label for="dataEHoras" class="control-label"><g:message code="autopsia.dataEHoras.label" default="Data E Hora do Exame" /><span class="required-indicator">*</span></label>
 				<div>
@@ -7,7 +9,7 @@
 					<span class="help-inline">${hasErrors(bean: autopsiaInstance, field: 'dataEHoras', 'error')}</span>
 				</div>
 			</div>
-			
+
 			<div class="${hasErrors(bean: autopsiaInstance, field: 'coletaDeMaterial', 'error')} required">
 				<label for="coletaDeMaterial" class="control-label"><g:message code="autopsia.coletaDeMaterial.label" default="Coleta De Material" /><span class="required-indicator">*</span></label>
 				<div>
@@ -22,10 +24,10 @@
 					<g:datePicker name="dataDeRequisicao" precision="day"  value="${autopsiaInstance?.dataDeRequisicao}"  />
 					<span class="help-inline">${hasErrors(bean: autopsiaInstance, field: 'dataDeRequisicao', 'error')}</span>
 				</div>
-			</div>
+			</div>			
 
 			<div class="${hasErrors(bean: autopsiaInstance, field: 'doencaConsequenciasFinal', 'error')} ">
-				<label for="doencaConsequenciasFinal" class="control-label"><g:message code="autopsia.doencaConsequenciasFinal.label" default="Doenca Consequencias Final" /></label>
+				<label for="doencaConsequenciasFinal" class="control-label"><g:message code="autopsia.doencaConsequenciasFinal.label" default="Doença Consequências Final" /></label>
 				<div>
 					<g:textField class="form-control" name="doencaConsequenciasFinal" value="${autopsiaInstance?.doencaConsequenciasFinal}"/>
 					<span class="help-inline">${hasErrors(bean: autopsiaInstance, field: 'doencaConsequenciasFinal', 'error')}</span>
@@ -33,7 +35,7 @@
 			</div>
 
 			<div class="${hasErrors(bean: autopsiaInstance, field: 'doencaPrincipal', 'error')} ">
-				<label for="doencaPrincipal" class="control-label"><g:message code="autopsia.doencaPrincipal.label" default="Doenca Principal" /></label>
+				<label for="doencaPrincipal" class="control-label"><g:message code="autopsia.doencaPrincipal.label" default="Doença Principal" /></label>
 				<div>
 					<g:textField class="form-control" name="doencaPrincipal" value="${autopsiaInstance?.doencaPrincipal}"/>
 					<span class="help-inline">${hasErrors(bean: autopsiaInstance, field: 'doencaPrincipal', 'error')}</span>
@@ -41,7 +43,7 @@
 			</div>
 
 			<div class="${hasErrors(bean: autopsiaInstance, field: 'doencasConsequencia', 'error')} ">
-				<label for="doencasConsequencia" class="control-label"><g:message code="autopsia.doencasConsequencia.label" default="Doencas Consequencia" /></label>
+				<label for="doencasConsequencia" class="control-label"><g:message code="autopsia.doencasConsequencia.label" default="Doenças Consequência" /></label>
 				<div>
 					<g:textField class="form-control" name="doencasConsequencia" value="${autopsiaInstance?.doencasConsequencia}"/>
 					<span class="help-inline">${hasErrors(bean: autopsiaInstance, field: 'doencasConsequencia', 'error')}</span>
@@ -49,7 +51,7 @@
 			</div>
 
 			<div class="${hasErrors(bean: autopsiaInstance, field: 'doencasContribuintes', 'error')} ">
-				<label for="doencasContribuintes" class="control-label"><g:message code="autopsia.doencasContribuintes.label" default="Doencas Contribuintes" /></label>
+				<label for="doencasContribuintes" class="control-label"><g:message code="autopsia.doencasContribuintes.label" default="Doenças Contribuintes" /></label>
 				<div>
 					<g:textField class="form-control" name="doencasContribuintes" value="${autopsiaInstance?.doencasContribuintes}"/>
 					<span class="help-inline">${hasErrors(bean: autopsiaInstance, field: 'doencasContribuintes', 'error')}</span>
@@ -97,7 +99,7 @@
 			</div>
 
 			<div class="${hasErrors(bean: autopsiaInstance, field: 'outrasDoencas', 'error')} ">
-				<label for="outrasDoencas" class="control-label"><g:message code="autopsia.outrasDoencas.label" default="Outras Doencas" /></label>
+				<label for="outrasDoencas" class="control-label"><g:message code="autopsia.outrasDoencas.label" default="Outras Doenças" /></label>
 				<div>
 					<g:textField class="form-control" name="outrasDoencas" value="${autopsiaInstance?.outrasDoencas}"/>
 					<span class="help-inline">${hasErrors(bean: autopsiaInstance, field: 'outrasDoencas', 'error')}</span>

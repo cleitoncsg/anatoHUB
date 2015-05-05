@@ -1,6 +1,6 @@
 <%@ page import="anato.Paciente" %>
 
-
+			<g:set var="layout_nosecondarymenu"	value="${true}" scope="request"/>
 			<div class="${hasErrors(bean: pacienteInstance, field: 'dataDeNascimento', 'error')} required">
 				<label for="dataDeNascimento" class="control-label"><g:message code="paciente.dataDeNascimento.label" default="Data De Nascimento" /><span class="required-indicator">*</span></label>
 				<div>

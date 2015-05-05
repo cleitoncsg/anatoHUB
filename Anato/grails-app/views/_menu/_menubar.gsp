@@ -3,11 +3,11 @@
 	
 			<li class="controller">
 				<g:link controller="paciente" action="index">
-					<h3><g:message code="paciente.label" default="Pacientes Do Sistema"/></h3>
+					<h4><g:message code="paciente.label" default="Pacientes Do Sistema"/></h4>
 				</g:link></li>
 
 				<li><g:link controller="searchable" action="index">
-					<h3><g:message code="searchable.label" default="Busca de Paciente"/></h3>
+					<h4><g:message code="searchable.label" default="Busca de Paciente"/></h4>
 				</g:link>
 			</li>
 		

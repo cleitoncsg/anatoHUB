@@ -6,6 +6,7 @@
 	<meta name="layout" content="kickstart" />
 	<g:set var="entityName" value="${message(code: 'imunoHistoquimica.label', default: 'ImunoHistoquimica')}" />
 	<title><g:message code="default.create.label" args="[entityName]" /></title>
+	<g:set var="layout_nosecondarymenu"	value="${true}" scope="request"/>
 </head>
 
 <body>

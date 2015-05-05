@@ -6,6 +6,7 @@
 	<meta name="layout" content="kickstart" />
 	<g:set var="entityName" value="${message(code: 'paciente.label', default: 'Paciente')}" />
 	<title><g:message code="default.edit.label" args="[entityName]" /></title>
+	<g:set var="layout_nosecondarymenu"	value="${true}" scope="request"/>
 </head>
 
 <body>
